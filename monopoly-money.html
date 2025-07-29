@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" id="viewport-meta">
     <title>SATURN - How OpenAI Is Turning Monopoly Money Into Real Debt</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Georgia&family=Arial&display=swap');
@@ -100,22 +100,27 @@
             line-height: 1.4;
         }
         
-        @media (max-width: 768px) {
-            .content {
-                column-count: 2;
-                column-gap: 15px;
-            }
-            
-            .title {
-                font-size: 36px;
-                letter-spacing: 2px;
-            }
-            
-            .headline {
-                font-size: 20px;
-            }
-        }
+        /* Remove responsive behavior - always show full newspaper layout */
     </style>
+    <script>
+        // Force wider layout on mobile for better readability
+        if (window.innerWidth <= 768) {
+            document.getElementById('viewport-meta').setAttribute('content', 'width=1000');
+            // Add inline style to override CSS
+            window.addEventListener('DOMContentLoaded', function() {
+                var container = document.querySelector('.container');
+                var content = document.querySelector('.content');
+                if (container) {
+                    container.style.maxWidth = '1000px';
+                }
+                if (content) {
+                    content.style.columnCount = '2';
+                    content.style.columnGap = '30px';
+                    content.style.fontSize = '14px';
+                }
+            });
+        }
+    </script>
 </head>
 <body>
     <div class="container">
