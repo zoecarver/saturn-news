@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SATURN - Beyond NVIDIA: The Narrow Path for AI Hardware Challengers</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Georgia&family=Arial&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 40px;
+            background-color: #ffffff;
+            font-family: Georgia, serif;
+            line-height: 1.6;
+            color: #000;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .title {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            margin: 0;
+            margin-bottom: 15px;
+        }
+        
+        .title a {
+            color: inherit;
+            text-decoration: underline;
+            transition: all 0.3s ease;
+        }
+        
+        .title a:hover {
+            color: #666;
+        }
+        
+        .author {
+            font-style: italic;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        
+        .publication-info {
+            font-size: 12px;
+            color: #333;
+        }
+        
+        .headline {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            margin: 30px 0 20px 0;
+            line-height: 1.3;
+        }
+        
+        .content {
+            column-count: 4;
+            column-gap: 20px;
+            text-align: left;
+            font-size: 12px;
+            line-height: 1.6;
+            word-spacing: normal;
+            hyphens: auto;
+            -webkit-hyphens: auto;
+            -moz-hyphens: auto;
+        }
+        
+        .content p {
+            margin-bottom: 15px;
+            text-indent: 0;
+        }
+        
+        .section-break {
+            text-align: center;
+            margin: 20px 0;
+            column-span: none;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                column-count: 2;
+                column-gap: 15px;
+            }
+            
+            .title {
+                font-size: 36px;
+                letter-spacing: 2px;
+            }
+            
+            .headline {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title"><a href="index.html">SATURN</a></h1>
+            <p class="author">Authored by Zoe Carver</p>
+            <p class="publication-info">July 7, 2025 · Vol. I No. 1</p>
+        </div>
+        
+        <h2 class="headline">Beyond NVIDIA: The Narrow Path for AI Hardware Challengers</h2>
+        
+        <div class="content">
+            <p>AI is everything right now. It's consuming the majority of venture capital—over $170 billion since 2024—and dominating every Fortune 500 boardroom. It's reshaping industries, redefining competitive advantage, and yes, it's even the topic of most dinner conversations. But beneath the ChatGPT demos and the promise of artificial general intelligence lies a fundamental truth: AI is ultimately limited by the chips it runs on. They need more chips. They need chips that don't exist yet. They need chips that cost billions of dollars.</p>
+
+            <p>The truth is, AI is just math. Some chips can do this math more quickly or more efficiently than other chips. The math happens in two ways—training, which is teaching the machine to pretend it understands things, and inference, which is the machine pretending to understand. Both require extraordinary computational power, driving an insatiable demand for specialized silicon. With the AI hardware market projected to explode from $25 billion to $77 billion by 2030, the multi-billion-dollar question becomes: who will make these chips?</p>
+
+            <p>Today, NVIDIA's GPUs power roughly 80% of AI training, their CUDA ecosystem is a trap that nobody seems to be able to escape. But the tide might be turning as NVIDIA's insane profit margins become unsustainable and the battle is shifting to inference and edge computing, where the rules are different. Meanwhile, tech giants are designing their own chips, startups are burning billions chasing breakthroughs, and the entire industry is asking what's next.</p>
+
+            <p>The following analysis examines the forces shaping this market, from technical architectures to business model realities, and projects the most likely scenarios for how AI hardware will evolve over the next five years.</p>
+
+            <div class="section-break">—</div>
+
+            <p>AI companies have a parade of platforms that they can use to run their models. They can rent dirt-cheap H100s from cloud providers who are quietly going broke. They can use heavily subsidized custom silicon from Google (TPUs) and Amazon (Trainium). They can build their own data centers packed with NVIDIA or AMD GPUs. Or they can be really ambitious and design their own chips.</p>
+
+            <p>Now there's another option: AI hardware startups like Tenstorrent, Groq, and Cerebras. On paper, these companies look like NVIDIA killers—clever architectures promising 10x better efficiency, nimble teams unencumbered by legacy, hungry to squeeze blood from stones and grab a piece of the $77 billion market.</p>
+
+            <p>Reality has other plans. These startups face a trust crisis. Customers must believe they'll secure adequate VC funding (in a market where AI hardware rounds now exceed $500 million), efficiently deploy that capital against enormous R&D costs, somehow secure TSMC allocation while competing with Apple and NVIDIA, survive long enough to provide support, and build an ecosystem that doesn't become another trap. Some players have already shattered trust—industry insiders suggest Groq's economics are unsustainable, possibly fraudulent. Cerebras faces skepticism about its actual deployment numbers.</p>
+
+            <p>The ecosystem challenge alone is worth a prayer. NVIDIA spent two decades building CUDA into an inescapable moat. These startups promise openness and interoperability, but these promises only go so far, and technical challenges prevent perfect on boarding and off boarding, especially between competitors. Companies like Modular aim to abstract away hardware differences, but middleware at this scale has a perfect record: it always fails. The switching costs remain astronomical.</p>
+
+            <p>Tenstorrent stands apart, barely. They've done everything right: genuinely open-source software, Jim Keller's reputation lending instant credibility, smart R&D choices using cheaper Samsung foundry nodes, and a team that somehow avoided the hubris that kills most startups. But they still need to win two big bets.</p>
+
+            <p>First, they believe AI's future requires mixed CPU-AI workloads, not just pure math accelerators. They're the last company standing with both AI hardware and a serious CPU team. If AI evolution proves them right, they win big. If not, they've burned precious resources building cathedrals for a god that doesn't exist.</p>
+
+            <p>Second, they're betting someone—anyone—will trust a startup with mission-critical AI infrastructure. This seems increasingly unlikely when hyperscalers like Google and Amazon offer better hardware for today's workloads at subsidized prices, and when one failed startup could destroy a customer's entire AI roadmap.</p>
+
+            <div class="section-break">—</div>
+
+            <p>So there are three likely scenarios for how this all ends.</p>
+
+            <p>NVIDIA Dominance Continues: The CUDA ecosystem becomes even more entrenched. NVIDIA keeps delivering high-performance chips for whatever workloads matter this week. This is the boring scenario, where things continue mostly as they are. Companies pay enormous overhead for less specialized chips and smile while doing it, because "nobody gets fired for buying NVIDIA." It's easy. It's proven. It works.</p>
+
+            <p>Hyperscaler Custom Silicon: When VC funding finally tightens and AI companies surface for air, they might notice something interesting. Google TPUs and Amazon Trainium chips offer most benefits of AI hardware startups, except they're backed by companies with infinite money who offer these chips as managed services. Low risk, high impact. The only reason companies haven't already stampeded toward these options is the developer tools are terrible and everyone's terrified of walking into another ecosystem trap.</p>
+
+            <p>Individual and Startup Custom Silicon: Maybe Tenstorrent's bets pay off. Maybe the landscape shifts. Maybe these highly specialized chips deliver the promised 10x performance improvement and suddenly the calculus changes. Maybe the ecosystems mature enough that switching hardware becomes as easy as changing socks. Maybe OpenAI builds their own chips and escapes everyone's profit margins (except TSMC's). Maybe a lot of things. This scenario requires things that are not true today to become true tomorrow. But then again, sometimes the unlikely happens. Sometimes David actually hits Goliath.</p>
+
+            <p>The future is already here, arriving in quarterly earnings reports. We're watching the first two scenarios merge into one inevitable outcome. Companies start with NVIDIA because they must—it's the only way to move fast enough to matter. Then the accountants arrive, wielding spreadsheets like weapons, and suddenly those Google TPUs and Amazon Trainium chips look beautiful. Not NVIDIA beautiful, but beautiful enough when you're burning $80 million per model training run.</p>
+
+            <p>This migration will accelerate. More companies will flee to the hyperscalers' custom silicon, trading one form of lock-in for another, but at least this cage comes with subsidized pricing. The tech giants will win because they always win. They have infinite money and infinite patience and they've been playing this game since before most AI startups were founded.</p>
+
+            <p>As for the dreamers building revolutionary architectures in garage labs and Series A pitch decks? As for Tenstorrent and their mixed-workload bet? As for Modular AI building a utopian hardware agnostic platform? Even perfect execution might not be enough. But the market is vast enough for boring and revolutionary to coexist. Companies need reliable and scalable today, but tomorrow they'll need whatever provides the next competitive edge. That's where opportunity lives—in the gap between what works now and what will matter next.</p>
+        </div>
+    </div>
+</body>
+</html>
